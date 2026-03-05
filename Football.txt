@@ -1,0 +1,59 @@
+
+
+--- Domain Knowledge Triples ---
+Miami_Hurricanes    lost            CFPNC_2026
+Indiana_Hoosiers    won             CFPNC_2026
+20_January_2026     is_date         CFPNC_2026
+27                  winning_score   CFPNC_2026
+21                  losing_score    CFPNC_2026
+Carson_Beck         played_in       CFPNC_2026
+Carson_Beck         member          Miami_Hurricanes
+Carson_Beck         instance        Man
+
+--- SUMO Instance Triples ---
+CFPNC_2026          instance        FootballUS
+Miami_Hurricanes    instance        SportsTeam
+Indiana_Hoosiers    instance        SportsTeam
+20_January_2026     instance        Day
+27                  instance        NonnegativeInteger
+21                  instance        NonnegativeInteger
+
+--- SUMO Subclass Hierarchy for FootballUS ---
+FootballUS          subclass        TeamSport
+TeamSport           subclass        Sport
+Sport               subclass        RecreationOrExercise
+RecreationOrExercise subclass       Activity
+Activity            subclass        Process
+Process             subclass        Physical
+Physical            subclass        Entity
+
+--- SUMO Subclass Hierarchy for SportsTeam ---
+SportsTeam          subclass        Organization
+Organization        subclass        Group
+Group               subclass        Collection
+Collection          subclass        Abstract
+Abstract            subclass        Entity
+
+--- SUMO Subclass Hierarchy for Day ---
+Day                 subclass        TimeInterval
+TimeInterval        subclass        TimeDuration
+TimeDuration        subclass        Physical
+Physical            subclass        Entity
+
+--- SUMO Subclass Hierarchy for NonnegativeInteger ---
+NonnegativeInteger  subclass        Integer
+Integer             subclass        RationalNumber
+RationalNumber      subclass        RealNumber
+RealNumber          subclass        Quantity
+Quantity            subclass        Abstract
+Abstract            subclass        Entity
+
+--- SUMO Subclass Hierarchy for Man ---
+Man                 subclass        Human
+Human               subclass        CognitiveAgent
+CognitiveAgent      subclass        Agent
+Agent               subclass        Physical
+Human               subclass        Animal
+Animal              subclass        Organism
+Organism            subclass        Physical
+Physical            subclass        Entity
